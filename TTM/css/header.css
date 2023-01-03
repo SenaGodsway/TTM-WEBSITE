@@ -1,0 +1,210 @@
+@font-face{
+    font-family: poppins;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face{
+    font-family: poppins-black;
+    src: url(../fonts/Poppins/Poppins-Black.ttf);
+}
+/* 
+@font-face{
+    font-family: heading;
+    src: url(../fonts/Oswald-VariableFont_wght.ttf);
+} */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "poppins-black";
+}
+p,a{
+    font-family: "poppins";
+}
+.topNav{
+    padding:10px 50px;
+    text-align: right;
+    /* background:#005; */
+    background:#000;
+    margin: 0;
+    color:#fff;
+    /* display: none; */
+    font-family: poppins;
+}
+.topNav i,
+.topNav p{
+    display: inline-block;
+}
+
+nav{
+    background:#fff;
+    /* background: #fefefe; */
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-bottom: 50vh; */
+}
+.brand-logo a{
+    font-family:poppins-black;
+    color:black !important;
+    text-decoration: none;
+    font-size: 1.5em;
+    /* font-weight: bolder; */
+}
+nav .nav-links{
+    display: flex;
+    z-index: 200;
+    position: relative;
+}
+
+nav .nav-links li{
+    list-style: none;
+    margin-left: 15px;
+    font-size: 1.2em !important;
+    color: #222 !important;
+    text-transform: capitalize;
+    font-weight: 10px;
+    font-family: poppins;
+    font-weight: bolder;
+    /* border-bottom: 2px solid transparent; */
+    z-index: 1000;
+    position: relative;
+}
+nav .nav-links li a{
+    text-decoration: none;
+    color: #222 !important;
+    /* list-style: none;
+    font-size: 1.2em;
+    color: #222;
+    text-transform: capitalize;
+    font-weight: 10px;
+    font-family: poppins;
+    font-weight: bolder; */
+}
+nav .nav-links .mobile-show{
+    padding: 10px 20px;
+    z-index: 10000;
+    background:#ffff;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    top: 35px;
+    left: 0px;
+    display: none;
+    border-radius: 3px;
+}
+nav .nav-links .mobile-show a{
+    padding: 5px;
+    display:block;
+    /* flex-direction: column; */
+    /* display: none; */
+    margin: 5px 0;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.fade-in{
+    animation-name: fading;
+    animation-duration: 2s;
+}
+@keyframes fading{
+    0%{
+        top: 20px;
+    }
+}
+
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+#closebtn{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background: rgb(2, 2, 2);
+    margin: 5px;
+}
+
+@media screen and (max-width:768px){
+    body{
+        box-sizing:border-box;
+    }
+    .topNav{
+        display: none;
+    }
+    .brand-logo a{
+        font-size: 1.2em;
+        z-index:90000000;
+    }
+    nav .nav-links{
+        position: absolute;
+        padding: 100px 0px 0px 50px;
+        box-sizing: border-box;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        background: #f1f1f1;
+        display: none;
+        flex-direction: column;
+        /* align-items: center; */
+        /* transform: translateX(100%);     */
+        /* transition: transform 0.5s ease-in; */
+        text-align: left;
+        border-bottom: none !important;
+    }
+    nav .nav-links li{
+        margin-bottom: 10px;
+        font-size: 1.7em !important;
+        border-bottom: none !important;
+    }
+    nav .nav-links li a{
+        border-bottom: none !important;
+    }
+    nav .nav-links .mobile-show{
+        z-index: 900;
+        background:transparent;
+        position:relative;
+        width: 80%;
+        top: 0px;
+        /* left: 150px; */
+        /* right: 0px; */
+        /* display: block; */
+        /* display: flex; */
+        padding: 0px 15px;
+    }
+    nav .nav-links .mobile-show a{
+        z-index: -1;
+        padding: 5px;
+        display:block;
+        /* flex-direction: column; */
+        /* display: none; */
+        margin: 2px 0;
+        color: #000;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+    .burger{
+        display: block;
+        z-index: 1000;
+    }
+    #closebtn{
+        display: none;
+        font-size: 2em;
+        z-index: 1000;
+    }
+    /* .nav-active{
+        transform: translateX( 0%);
+        background: red;
+        display: flex;
+    } */
+}

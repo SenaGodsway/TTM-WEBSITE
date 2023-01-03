@@ -1,0 +1,175 @@
+@font-face{
+    font-family: poppins;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face{
+    font-family: poppins-black;
+    src: url(../fonts/Poppins/Poppins-Black.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "poppins-black";
+}
+p,a{
+    font-family: "poppins";
+}
+
+section{
+    display: flex;
+    /* background: #f1f1f1; */
+    width: 90%;
+    margin:50px auto;
+}
+#contact-info{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    /* text-align: center;
+    justify-content: center; */
+    /* background: orange; */
+    width: 30%;
+    box-sizing: border-box;
+}
+#contact-info div{
+    width: 80%;
+    margin: 0px auto 50px auto;
+    background-color:#f1f1f1;
+    padding: 10px;
+}
+
+#contact-area{
+    padding: 50px;
+    background:#f1f1f1;
+    /* margin-top: 50px; */
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+#contact-area h4{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#contact-area  label{
+    font-size: 1.2em;
+    font-family:poppins;
+    color:#222;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    display: block;
+}
+#contact-area input{
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 70%;
+    background: #fff;
+    border: #fefefe;
+    outline: none;
+    border-radius: 2px;
+}
+#contact-area textarea{
+    resize: none;
+    height: 180px;
+    width: 70%;
+    background: #fff;
+    display: block;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.submit-btn{
+    padding: 15px;
+    background: #005 !important;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    display: block !important;
+    width: 30%;
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width:768px){
+    section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #contact-info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        /* text-align: center;
+        justify-content: center; */
+        /* background: orange; */
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #contact-info div{
+        width: 90%;
+        margin: 0px auto 50px auto;
+        background-color:#f1f1f1;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    #contact-area{
+        padding: 20px;
+        background:#f1f1f1;
+        margin-top: 50px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #contact-area h4{
+        font-family: heading;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+    
+    #contact-area  label{
+        font-size: 1.2em;
+        font-family: rale;
+        color:#222;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        display: block;
+    }
+    #contact-area input{
+        margin-bottom: 10px;
+        padding: 15px;
+        width: 90%;
+        background: #fff;
+        border: #fefefe;
+        outline: none;
+        border-radius: 2px;
+    }
+    #contact-area textarea{
+        resize: none;
+        height: 180px;
+        width: 90%;
+        background: #fff;
+        display: block;
+        border: none;
+        outline: none;
+        border-radius: 2px;
+    }
+    .submit-btn{
+        width: 50%;
+    }
+}
